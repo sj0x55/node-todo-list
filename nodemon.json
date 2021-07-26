@@ -1,0 +1,15 @@
+{
+  "watch": ["./src"],
+  "ignore": [".git", ".history", "node_modules", "dist"],
+  "ext": "ts,tsx",
+  "exec": "npm start",
+  "events": {
+     "restart": "kill-port 9229"
+  },
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "signal": "SIGINT",
+  "verbose": true,
+  "delay": "500"
+}
