@@ -12,5 +12,5 @@
     "outDir": "./dist"
   },
   "include": ["src/**/*.ts"],
-  "exclude": [".history", ".vscode", "dist", "node_modules", "**/*.spec.ts"]
+  "exclude": [".history", ".vscode", "dist", "node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }
