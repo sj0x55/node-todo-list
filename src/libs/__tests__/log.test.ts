@@ -14,25 +14,25 @@ afterAll(() => {
   consoleLogSpy.mockRestore();
 });
 
-test('should log unknown message', () => {
+it('should log unknown message', () => {
   log('');
   expect(consoleLogSpy).toHaveBeenCalledTimes(1);
   expect(consoleLogSpy).toHaveBeenCalledWith('[LOG] %s', 'Unknown message');
 });
 
-test('should log unknown error', () => {
+it('should log unknown error', () => {
   error('');
   expect(consoleLogSpy).toHaveBeenCalledTimes(1);
   expect(consoleLogSpy).toHaveBeenCalledWith('[ERROR] %s', 'Unknown error');
 });
 
-test('should log message', () => {
+it('should log message', () => {
   log('test msg');
   expect(consoleLogSpy).toHaveBeenCalledTimes(1);
   expect(consoleLogSpy).toHaveBeenCalledWith('[LOG] %s', 'test msg');
 });
 
-test('should log error', () => {
+it('should log error', () => {
   error('test error');
   expect(consoleLogSpy).toHaveBeenCalledTimes(1);
   expect(consoleLogSpy).toHaveBeenCalledWith('[ERROR] %s', 'test error');

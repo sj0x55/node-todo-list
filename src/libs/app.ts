@@ -15,7 +15,7 @@ export async function killPort(port: number): Promise<void> {
   }
 }
 
-export async function listenServer(app: Application, port: number, callback: () => void): Promise<void> {
+export async function listenServer(app: Application, port: number, callback?: () => void): Promise<void> {
   const server = http.createServer(app);
   const onSignal = async () => {
     log('Server is starting cleanup');
